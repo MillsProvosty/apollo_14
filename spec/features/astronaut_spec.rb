@@ -7,15 +7,15 @@ RSpec.describe 'When I visit astronauts'do
     end
 
     it 'shows name, age, job' do
-      save_and_open_page
       visit astronauts_path
+      save_and_open_page
       expect(page).to have_content(@astronaut_1.name)
       expect(page).to have_content(@astronaut_1.age)
       expect(page).to have_content(@astronaut_1.job)
 
     end
 
-    it 'shows average age of all astronauts' do 
+    # it 'shows average age of all astronauts' do
     # As a visitor,
     # When I visit '/astronauts'
     # I see the average age of all astronauts.
